@@ -1,0 +1,3 @@
+CREATE POLICY "anyone uploads resume" ON storage.objects FOR INSERT TO anon, authenticated WITH CHECK (bucket_id = 'resumes');
+CREATE POLICY "admins read resumes" ON storage.objects FOR SELECT TO authenticated USING (bucket_id = 'resumes' AND public.is_admin(auth.uid()));
+CREATE POLICY "admins delete resumes" ON storage.objects FOR DELETE TO authenticated USING (bucket_id = 'resumes' AND public.is_admin(auth.uid()));

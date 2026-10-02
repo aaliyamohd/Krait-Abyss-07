@@ -1,0 +1,4 @@
+/api/contact/book-call /.netlify/functions/book-call 200
+/api/contact/submit /.netlify/functions/submit-brief 200
+/api/careers/apply /.netlify/functions/apply-career 200
+/* /index.html 200
